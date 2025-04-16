@@ -1,7 +1,14 @@
+import sampleData from "@/db/sample-data";
+import ProductList from "@/components/shared/product/product-list";
+
 const Homepage = async () => {
   return (
     <>
-    <h1>Prostore</h1>
+    <ProductList 
+    data={sampleData.products} 
+    title='Newest Arrivals'
+    limit={4}
+    />
     </>
   )
 }
